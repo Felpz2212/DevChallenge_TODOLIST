@@ -45,6 +45,14 @@ public class Pessoa {
         }
     }
 
+    public void alterarConcluida(int id){
+        for (Tarefas tarefa1 : listaTarefas) {
+            if (tarefa1.getId() == id) {
+                tarefa1.setStatus("Concluida");
+            }
+        }
+    }
+
     // TODO: 12/01/2022 criar formas de mudar o status de uma tarefa, utilizar regras de restrições para tarefas na lista da pessoa
 
 
