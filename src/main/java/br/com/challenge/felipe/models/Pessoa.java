@@ -2,6 +2,7 @@ package br.com.challenge.felipe.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Pessoa {
 
@@ -26,8 +27,6 @@ public class Pessoa {
         return listaTarefas;
     }
 
-
-
     public void verificarPendentes(){
         for(Tarefas tarefa1 : listaTarefas){
             if(tarefa1.getStatus().equals("pendente")){
@@ -42,6 +41,16 @@ public class Pessoa {
             throw new RuntimeException("Tarefa Nao Encontrada para o usuario");
         }else{
             tarefa.setStatus("Concluida");
+        }
+    }
+
+    public void alterarPrioridade(Tarefas tarefa){
+        if(!listaTarefas.contains(tarefa)){
+            throw new RuntimeException("Tarefa Nao Encontrada para o usuario");
+        }else{
+            Scanner tec = new Scanner(System.in);
+            System.out.println("Digite a nova prioridade");
+            tarefa.setPrioridade(tec.nextLine());
         }
     }
 

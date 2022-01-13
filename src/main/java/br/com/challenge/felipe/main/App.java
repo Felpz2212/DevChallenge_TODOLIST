@@ -20,10 +20,15 @@ public class App {
 
         felipe.verificarPendentes();
         felipe.alterarConcluida(tarefa2);
-        felipe.alterarConcluida(9);
+        felipe.alterarConcluida(8);
         //pedro.alterarConcluida(tarefa1);
 
         System.out.println(felipe);
        //System.out.println(pedro);
+
+
+        felipe.alterarPrioridade(tarefa1);
+
+        System.out.println(tarefa1);
     }
 }
