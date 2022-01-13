@@ -22,6 +22,20 @@ public class Pessoa {
         return this;
     }
 
+    public List<Tarefas> getListaTarefas() {
+        return listaTarefas;
+    }
+
+
+
+    public void verificarPendentes(){
+        for(Tarefas tarefa1 : listaTarefas){
+            if(tarefa1.getStatus().equals("pendente")){
+                System.out.println(tarefa1);
+            }
+        }
+    }
+
 
 
     public void removerTarefa(Tarefas tarefa){

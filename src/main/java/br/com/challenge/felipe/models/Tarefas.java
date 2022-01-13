@@ -20,11 +20,17 @@ public class Tarefas {
         return new Tarefas(id, descricao,prioridade);
     }
 
-    public Tarefas adicionarCategoria(Tarefas tarefa){
+
+    public String getStatus() {
+        return status;
+    }
+
+    public Tarefas adicionarTarefa(Tarefas tarefa){
         this.tarefas.add(tarefa);
 
         return this;
     }
+
 
     @Override
     public String toString() {
@@ -33,6 +39,6 @@ public class Tarefas {
                 ", descricao='" + descricao + '\'' +
                 ", status='" + status + '\'' +
                 ", prioridade='" + prioridade + '\'' +
-                '}';
+                '}' + "\n";
     }
 }
