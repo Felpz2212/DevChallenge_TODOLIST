@@ -25,6 +25,10 @@ public class Tarefas {
         return status;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setStatus(String status) {
         this.status = status;
     }
