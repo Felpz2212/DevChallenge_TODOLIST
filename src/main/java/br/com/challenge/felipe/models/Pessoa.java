@@ -62,7 +62,6 @@ public class Pessoa {
 
     }
 
-    // TODO: 12/01/2022 criar formas de mudar o status de uma tarefa, utilizar regras de restrições para tarefas na lista da pessoa
 
 
     public void removerTarefa(Tarefas tarefa){
