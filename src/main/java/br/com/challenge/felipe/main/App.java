@@ -10,6 +10,7 @@ public class App {
        Tarefas tarefa2 = Tarefas.of(5, "Teste1", "Alta");
 
         Pessoa felipe = Pessoa.of("Felipe");
+        Pessoa pedro = Pessoa.of("Pedro");
 
         felipe.adicionarTarefas(tarefa1);
         felipe.adicionarTarefas(tarefa2);
@@ -18,5 +19,10 @@ public class App {
 
 
         felipe.verificarPendentes();
+        felipe.alterarConcluida(tarefa2);
+        pedro.alterarConcluida(tarefa1);
+
+        System.out.println(felipe);
+        System.out.println(pedro);
     }
 }

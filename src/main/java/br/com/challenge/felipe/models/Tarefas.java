@@ -25,6 +25,10 @@ public class Tarefas {
         return status;
     }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public Tarefas adicionarTarefa(Tarefas tarefa){
         this.tarefas.add(tarefa);
 

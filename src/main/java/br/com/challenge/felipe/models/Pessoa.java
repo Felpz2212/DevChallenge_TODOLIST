@@ -37,6 +37,16 @@ public class Pessoa {
     }
 
 
+    public void alterarConcluida(Tarefas tarefa){
+        if(!listaTarefas.contains(tarefa)){
+            throw new RuntimeException("Tarefa Nao Encontrada para o usuario");
+        }else{
+            tarefa.setStatus("Concluida");
+        }
+    }
+
+    // TODO: 12/01/2022 criar formas de mudar o status de uma tarefa, utilizar regras de restrições para tarefas na lista da pessoa
+
 
     public void removerTarefa(Tarefas tarefa){
         this.listaTarefas.remove(tarefa);
