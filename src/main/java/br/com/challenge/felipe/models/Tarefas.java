@@ -24,13 +24,20 @@ public class Tarefas {
     public String getStatus() {
         return status;
     }
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public int getId() {
         return id;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public String getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(String prioridade) {
+        this.prioridade = prioridade;
     }
 
     public Tarefas adicionarTarefa(Tarefas tarefa){
