@@ -37,6 +37,7 @@ public class Pessoa {
     }
 
 
+
     public void alterarConcluida(Tarefas tarefa){
         if(!listaTarefas.contains(tarefa)){
             throw new RuntimeException("Tarefa Nao Encontrada para o usuario");
