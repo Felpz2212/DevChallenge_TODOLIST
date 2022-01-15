@@ -1,5 +1,7 @@
 package br.com.challenge.felipe.models;
 
+import br.com.challenge.felipe.enums.Prioridade;
+
 import java.util.List;
 
 public class Tarefas {
@@ -7,16 +9,16 @@ public class Tarefas {
     private int id;
     private String descricao;
     private String status;
-    private String prioridade;
+    private Prioridade prioridade;
 
-    private Tarefas(int id, String descricao, String prioridade){
+    private Tarefas(int id, String descricao, Prioridade prioridade){
         this.id = id;
         this.descricao = descricao;
         this.status = "pendente";
         this.prioridade = prioridade;
     }
 
-    public static Tarefas of(int id, String descricao, String prioridade){
+    public static Tarefas of(int id, String descricao, Prioridade prioridade){
         return new Tarefas(id, descricao,prioridade);
     }
 
@@ -32,11 +34,11 @@ public class Tarefas {
         return id;
     }
 
-    public String getPrioridade() {
+    public Prioridade getPrioridade() {
         return prioridade;
     }
 
-    public void setPrioridade(String prioridade) {
+    public void setPrioridade(Prioridade prioridade) {
         this.prioridade = prioridade;
     }
 

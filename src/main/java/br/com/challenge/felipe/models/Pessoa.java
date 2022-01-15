@@ -1,5 +1,7 @@
 package br.com.challenge.felipe.models;
 
+import br.com.challenge.felipe.enums.Prioridade;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -48,10 +50,25 @@ public class Pessoa {
     public void alterarPrioridade(Tarefas tarefa){
         if(!listaTarefas.contains(tarefa)){
             throw new RuntimeException("Tarefa Nao Encontrada para o usuario");
-        }else{
+        }else {
+            System.out.println("1- Alta, 2- Média, 3- baixa");
             Scanner tec = new Scanner(System.in);
-            System.out.println("Digite a nova prioridade");
-            tarefa.setPrioridade(tec.nextLine());
+            int op = 0;
+            Prioridade prioridade = null;
+            op = tec.nextInt();
+            switch (op) {
+                case 1:
+                    prioridade = Prioridade.ALTA;
+                    break;
+                case 2:
+                    prioridade = Prioridade.MEDIA;
+                    break;
+                case 3:
+                    prioridade = Prioridade.BAIXA;
+                    break;
+
+            }
+            tarefa.setPrioridade(prioridade);
         }
     }
 
